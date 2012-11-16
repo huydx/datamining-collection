@@ -56,7 +56,17 @@ if args.algorithm == 'LK':
   #  for j in range(1, dst_img.height, 1):
   #    features.append((i,j)) 
   
-  r = cv.CalcOpticalFlowPyrLK(src_im1, src_im2, None, None, features, (100,100), 0, (cv.CV_TERMCRIT_ITER | cv.CV_TERMCRIT_EPS, 64, 0.01) ,0)
+  #cornerMap = cv.CreateMat(src_im1.height, src_im1.width, cv.CV_32FC1)
+  #cv.CornerHarris(src_im1,cornerMap,3)
+
+  #features = []
+  #for y in range(0, src_im1.height):
+  #  for x in range(0, src_im1.width):
+  #    harris = cv.Get2D(cornerMap, y, x)
+  #    if harris[0] > 10e-6:
+  #      features.append((x, y))      
+ 
+  r = cv.CalcOpticalFlowPyrLK(src_im1, src_im2, None, None, features, (50,50), 0, (cv.CV_TERMCRIT_ITER | cv.CV_TERMCRIT_EPS, 64, 0.01) ,0)
   list = r[0]
   for i in range(len(list)) :
     dis = math.sqrt(math.pow((features[i][0]-list[i][0]),2) + math.pow((features[i][1]-list[i][1]),2))
