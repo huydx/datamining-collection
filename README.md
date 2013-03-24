@@ -1,7 +1,7 @@
-ritsumei-class
+Datamining algorithm collection
 ==============
 
-school projects (algorithm implements) including 
+projects (algorithm implements) including 
 ##
 (audio processing) **EM algorithm** : http://ja.wikipedia.org/wiki/EM%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0 
 ##
